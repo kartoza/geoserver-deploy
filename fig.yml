@@ -1,0 +1,17 @@
+db:
+  image: kartoza/postgis
+  hostname: postgis
+  volumes:
+    - ./postgres_data:/var/lib/postgresql
+  environment:
+    - USERNAME=docker
+    - PASS=docker
+
+geoserver:
+  image: kartoza/geoserver
+  hostname: geoserver
+  volumes:
+    - ./geoserver_data:/opt/geoserver/data_dir
+  links:
+    - db:db
+

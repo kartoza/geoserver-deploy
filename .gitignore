@@ -1,0 +1,7 @@
+# Vim leftovers
+*.*~
+
+# Pg cluster for docker
+postgres_data/9.3
+geoserver_data/*
+venv
